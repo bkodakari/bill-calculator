@@ -18,12 +18,13 @@ def main():
         print calculate_tip(bill_amount, tip_percentage)
         split_option = raw_input("Do you want to split the bill? Y/N : ")
         if split_option.lower() == "y":
-            number_people = int(raw_input("How many people are splitting the bill?"))
-            print split_bill(total_bill, number_people)
+            num_people = int(raw_input("How many people are splitting the bill?"))
+            print split_bill(total_bill, num_people)
         else:
             calculate_tip(bill_amount, tip_percentage)
     else:
-        print split_bill(total_bill, number_people)
+        num_people = int(raw_input("How many people are splitting the bill?"))
+        print split_bill(total_bill, num_people)
 
 
 if __name__ == '__main__':
